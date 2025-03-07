@@ -6,90 +6,167 @@
     <title>Invitación de Boda</title>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Italiana&family=Poppins:wght@400&family=Tinos:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(to bottom, #552a2abb, #2e2d2d);
-            font-family: 'Averia Serif Libre', serif;
-            color: #4a4a4a;
-            text-align: center;
-            padding: 20px;
-        }
+        /* General Styling */
+body {
+    background: linear-gradient(to bottom, #552a2abb, #2e2d2d);
+    font-family: 'Averia Serif Libre', serif;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
 
-        .footer {
-            color: #f0e6e6; /* Light pastel tone for better readability */
-            font-size: 1.2rem; /* Slightly larger font for emphasis */
-            margin-top: 20px;
-        }
-        .invitation-container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h1 {
-            font-family: 'Italiana', serif;
-            font-size: 3.5rem;
-            color: #333;
-        }
-        h2 {
-            font-family: 'Tinos', serif;
-            font-size: 2rem;
-            color: #555;
-        }
-        .initial-phrase {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-        }
-        .schedule-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .schedule-item {
-            width: 22%;
-        }
-        .schedule-item img {
-            max-width: 100px;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
+/* Responsive Footer */
+.footer {
+    color: #f0e6e6;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
 
-        .rsvp-form input, .rsvp-form select {
-            width: calc(100% - 30px); /* Ensures the fields stay within the container */
-            padding: 12px; /* Reducing padding slightly */
-            margin: 15px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            display: block;
-            box-sizing: border-box; /* Ensures padding does not cause overflow */
-        }
+/* Centered Invitation Container */
+.invitation-container {
+    max-width: 90%; /* Adjust width for small screens */
+    max-width: 600px; /* Limits width on large screens */
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-         button {
-            background: linear-gradient(to right, #6d4c41, #a98574);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out, background 0.3s;
-        }
-        button:hover {
-            background: linear-gradient(to right, #5a3b33, #947564);
-            transform: scale(1.05);
-        }
+/* Responsive Headings */
+h1 {
+    font-family: 'Italiana', serif;
+    font-size: 3vw; /* Scales dynamically */
+    color: #333;
+}
+
+h2 {
+    font-family: 'Tinos', serif;
+    font-size: 2.5vw;
+    color: #555;
+}
+
+/* Responsive Phrase */
+.initial-phrase {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* Schedule Layout (Responsive Grid) */
+.schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.schedule-item {
+    width: 45%; /* Two per row */
+    text-align: center;
+}
+
+.schedule-item img {
+    max-width: 80px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Make Images Fully Responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Form Fields */
+.rsvp-form input, .rsvp-form select {
+    width: 100%; /* Full width on small screens */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Prevents overflowing */
+}
+
+/* Responsive Buttons */
+button {
+    background: linear-gradient(to right, #6d4c41, #a98574);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s;
+    width: 100%; /* Full width on mobile */
+}
+
+button:hover {
+    background: linear-gradient(to right, #5a3b33, #947564);
+    transform: scale(1.05);
+}
+
+/* 🎯 Mobile & Tablet Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5vw; /* Scale heading */
+    }
+
+    h2 {
+        font-size: 4.5vw;
+    }
+
+    .schedule-item {
+        width: 100%; /* Stack items */
+    }
+
+    .rsvp-form input, .rsvp-form select {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+/* 🎯 Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .invitation-container {
+        padding: 20px;
+    }
+
+    .rsvp-form input, .rsvp-form select {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
     </style>
 </head>
 <body>
